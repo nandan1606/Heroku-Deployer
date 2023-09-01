@@ -6,7 +6,8 @@ import base64 as r
 from apscheduler.schedulers.background import BackgroundScheduler
 from os import execvp,sys , execl,environ
 from sys import executable
-
+from dotenv import load_dotenv
+load_dotenv("config.env")
 #Scheduler can  be used to automatically restart the program if any kind if memory issues
 def restar():
      os.system("rm -rf /tmp/*")
@@ -18,8 +19,8 @@ def restar():
 #scheduler.add_job(restar, "interval", minutes=30)
 #scheduler.start()
 try:
-    runrepo=environ['repo_url']
-    runcmd=environ['run_cmd']
+    runrepo=os.environ['repo_url']
+    runcmd=os.environ['run_cmd']
 except KeyError as e:
      sys.exit(f"Important environment variables are missing {e}")
 x=f"git clone {runrepo} repo"
