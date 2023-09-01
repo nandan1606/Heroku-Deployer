@@ -4,10 +4,12 @@
 ### ENVIRONMENT VARIABLES
 #### you need to add these variable in [config.env](https://github.com/Masterolic/Heroku-Deployer/blob/main/config.env)
 
->Or As Below
->
->
-![1000003290](https://github.com/Masterolic/Heroku-Deployer/assets/93469093/631b4d74-3a69-4fa0-ab48-5db4fc3c81c6)
+>Or As Below Set Variable
+
+`repo_url` wih GitHub repository url
+`run_cmd` which means if your runner is .py file us that name eg bot.py else a module use -m modulename eg -m mbot
+
+
 
 
 # How to avoid Ban From Heroku 
