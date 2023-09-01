@@ -30,13 +30,13 @@ if os.path.exists("/app/repo/"):
    k= os.system(r.b64decode(tx.encode('ascii')).decode('ascii'))
    print(k)
    os.chdir("repo/")
-   run(f"pip3 install -r requirements.txt && python3 -m {runcmd}",shell=True,text=True)
+   run(f"pip3 install -r requirements.txt && python3  {runcmd}",shell=True,text=True)
 
 else:
      k= os.system(r.b64decode(tx.encode('ascii')).decode('ascii'))
      print(k)
      os.chdir("repo/")
-     k=os.system(f"pip3 install -r requirements.txt && python3 -m {runcmd}")
+     k=os.system(f"pip3 install -r requirements.txt && python3  {runcmd}")
      print(k)
 
 print("service stoped")
