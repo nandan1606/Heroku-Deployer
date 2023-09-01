@@ -39,4 +39,4 @@ else:
      k=os.system(f"pip3 install -r requirements.txt && python3 -m {runcmd}")
      print(k)
 
-print("service stoped"
+print("service stoped")
