@@ -21,8 +21,7 @@ try:
     runrepo=environ['repo_url']
     runcmd=environ['run_cmd']
 except KeyError as e:
-     print(f"Important environment variables are missing {e}")
-     sys.exit(1) 
+     sys.exit(f"Important environment variables are missing {e}")
 x=f"git clone {runrepo} repo"
 tx=r.b64encode(x.encode('ascii')).decode('ascii')
 if os.path.exists("/app/repo/"):
